@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/* Khôi phục mặc định */
+body {
+    font-size: 1.6rem;
+}
+
+/* Hoàn tất base dự án */
