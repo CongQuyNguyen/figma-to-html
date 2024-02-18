@@ -441,6 +441,11 @@ body {
   background-color: #2e2100;
 }
 
+.feedback-list {
+  display: flex;
+  flex-shrink: 0;
+}
+
 .feedback-item {
   display: flex;
 }
@@ -496,5 +501,197 @@ body {
 
 .feedback-item .dot.active {
   background-color: var(--primary-color);
+  cursor: default;
+}
+
+/* ==========FEATURE=========== */
+/* ==========FEATURE-NEW=========== */
+.features,
+.features-new {
+  margin-top: 135px;
+  padding: 65px, 0;
+}
+
+.features .body,
+.features-new .body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.features .images {
+  display: flex;
+  gap: 30px;
+}
+
+.features .images img,
+.features-new img {
+  width: 270px;
+  height: 405px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.features .images .lower {
+  margin-top: 34px;
+}
+
+.features .content,
+.features-new .content {
+  width: 41%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.features .desc,
+.features-new .desc {
+  margin-top: 16px;
+  color: #5f5b53;
+  font-size: 1.6rem;
+  line-height: 1.75;
+}
+
+.features .cta-btn,
+.features-new .cta-btn {
+  margin-top: 34px;
+  color: #fff;
+  background: var(--primary-color);
+  width: 137px;
+  height: 50px;
+  border-radius: 26px;
+  cursor: pointer;
+}
+
+/* ==========BLOG=========== */
+.blogs {
+  margin-top: 135px;
+  padding: 96px 0;
+  background-color: #fffcf4;
+}
+
+.blogs .blog-top {
+  text-align: center;
+}
+
+.blogs .blog-top .desc {
+  color: #696262;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  width: 448px;
+  margin: 16px auto 0;
+}
+
+.blogs .blog-list {
+  display: flex;
+  margin-top: 55px;
+  gap: 30px;
+
+   /* Khung cho JS trượt: Ẩn cái bị trồi */
+   overflow: hidden;
+}
+
+.blogs .item {
+  width: calc(33.33% - 20px);
+  background: #fff;
+
+  /* Khung cho JS trượt */
+  flex-shrink: 0;
+
+  transition: all;
+  transform: translateX(-100%);
+}
+
+.blogs .item .thumb {
+  width: 100%;
+  height: 250px;
+  border-radius: 16px 16px 0 0;
+  object-fit: cover;
+}
+
+.blogs .item .info {
+  padding: 20px 20px 28px;
+}
+
+.blogs .item .date {
+  /* Nội dung dài ra thì gạch chân cũng dài ra */
+  display: inline-flex;
+
+  position: relative;
+  align-items: center;
+  color: #5f5b53;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  padding-bottom: 12px;
+}
+
+/* Dấu chấm tròn */
+.blogs .item .date::before {
+  content: "";
+  display: inline-block;
+  text-align: center;
+  margin-right: 4px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary-color);
+}
+
+/* Dấu gạch */
+.blogs .item .date::after {
+  content: "";
+  display: inline-block;
+
+  /* Nội dung dài ra thì gạch chân cũng dài ra */
+  right: -27px;
+
+  height: 1px;
+  border-radius: 0.5px;
+  background: #e2dfda;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.blogs .item .title {
+  margin-top: 12px;
+  color: #171100;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75;
+}
+
+.blogs .item .btn {
+  margin-top: 12px;
+  font-size: 1.4rem;
+}
+
+.blogs .item .btn:hover {
+  color: #fff;
+  background: var(--primary-color);
+}
+
+.blogs .item:hover {
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+
+/* Tạo các chấm tròn và chuyển đổi */
+.blogs .dots {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 38px;
+}
+
+.blogs .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #5f5b53;
+  cursor: pointer;
+}
+
+.blogs .dot.active {
+  background: var(--primary-color);
   cursor: default;
 }
